@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Aula 10</title>
+</head>
+<body>
+    <div id="area">
+        Interaja...
+    </div>
+
+    <script>
+        var a = document.getElementById('area')
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+        a.addEventListener('mousedown', segurar)
+        
+        function entrar() {
+            a.innerText = "Olá 👋"
+            a.style.background = "green"
+        }
+
+        function sair() {
+            a.innerText = "Tchauzinho 👋"
+            a.style.background = "red"
+        }
+
+        function clicar() {
+            a.innerText = "Você clicou aqui 👇"
+            a.style.background = "yellow"
+        }
+
+        function segurar(){
+            a.innerText = "Segura firme aí hein 😬"
+            a.style.background = "orange"
+        }
+    </script>
+</body>
+</html>
