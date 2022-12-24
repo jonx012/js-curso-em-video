@@ -7,6 +7,22 @@
     <title>Brasileiro?</title>
 </head>
 <body>
-    <h1>Você é Brasileiro ou Estrangeiro</h1>
+    <h1>Você é Brasileiro ou Estrangeiro?</h1>
+    <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <br>
+    <div id="res"></div>
+    <script>
+        function verificar() {
+            var txtpais = document.getElementById('txtpais')
+            var pais = (txtpais.value).toUpperCase()
+            var res = document.querySelector('#res')
+            if (pais == 'BRASIL') {
+                res.innerHTML = '<p>Você é <strong><font color="green">Brasileiro</font></strong>!</p>'
+            } else {
+                res.innerHTML = 'Você é <strong>Estrangeiro!</strong>'
+            }
+        }
+    </script>
 </body>
 </html>
